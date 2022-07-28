@@ -1,0 +1,12 @@
+﻿@model ECommProject.Models.Product
+
+<hr />
+<div class="form-group">
+    <input asp-for="ProductName" disabled />
+    <span asp-validation-for="ProductName" class="text-danger"></span>
+    @Html.HiddenFor(e=>e.id)
+    @Html.HiddenFor(e=>e.CategoryId)
+
+    @Html.CheckBoxFor(e=>e.check)
+    <span asp-validation-for="check"  class="text-danger"></span>
+</div>

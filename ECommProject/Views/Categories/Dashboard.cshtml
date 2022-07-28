@@ -1,0 +1,47 @@
+﻿@model dynamic
+@using ECommProject.Models;
+
+<h1>Dashboard</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Category Name
+                </th>
+            </tr>
+            @foreach(Category c in Model.categories)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(e=>c.CategoryName)</td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Category Name
+                </th>
+                <th>
+                    Product Price
+                </th>
+            </tr>
+            @foreach(Product p in Model.products)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(e=>p.ProductName)</td>
+                     <td>@Html.DisplayFor(e=>p.CategoryId)</td>
+                      <td>@Html.DisplayFor(e=>p.ProductPrice)</td>
+                </tr>
+            }
+        </table>
+    </div>
+    
+
+</div>

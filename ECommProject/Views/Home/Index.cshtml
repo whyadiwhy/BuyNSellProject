@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ECommProject.Models.Product>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To AMart</h1>
+   
+</div>
+@foreach(var item in Model)
+{
+<div class= "card" style="width: 18rem;">
+    <img src="@item.path" class="card-img-top" alt=".....">
+    <div class=" card-body">
+      <h5 class="card-title">@item.ProductName</h5>
+      <p class="card-text">@item.ProductDesc</p>
+      <p class="card-text">@item.ProductPrice</p>
+    </div>
+</div>
+}

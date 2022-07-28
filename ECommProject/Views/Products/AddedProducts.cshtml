@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ECommProject.Models.Product>
+
+@{
+    ViewData["Title"] = "AddedProducts";
+}
+
+
+
+<h1>Added Products</h1>
+<div class="row">
+    <div class="col-4">
+        <form asp-action="AddedProducts">
+           
+            @Html.EditorForModel()
+            <input type ="submit" value="Add Products" />
+        </form>
+    </div>
+</div>
